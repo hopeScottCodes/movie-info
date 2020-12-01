@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+    color: cornsilk;
+    a {
+        color: cornsilk;
+        text-decoration: none;
+    }
+    input,
+    button,
+    textarea {
+        font-family: 'Nunito', sans-serif;
+        font-size: 1rem;
+    }
+}
+
+.logo-span {
+    color: coral;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    header {
+        height: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #title {
+            flex: 1;
+        }
+        #somelinks {
+            flex: 1;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            a {
+                color: coral;
+                font-weight: 600;
+                &:hover {
+                    color: cornsilk;
+                }
+            }
+        }
+    }
+    main {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        padding-top: 2rem;
+        #search-form {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            width: 90%;
+            margin: auto;
+            input {
+                padding: 0.5rem;
+                width: 60%;
+                margin: auto;
+                margin-bottom: 1rem;
+                background: transparent;
+                border: 2px solid rgb(48, 62, 143);
+                color: cornsilk;
+                caret-color: rgb(48, 62, 143);
+                &:focus {
+                    border: 2px solid rgb(29, 40, 99);
+                }
+            }
+            button {
+                padding: 0.5rem;
+                width: 60%;
+                margin: auto;
+                margin-bottom: 1rem;
+                background: rgb(48, 62, 143);
+                border: none;
+                color: cornsilk;
+                cursor: pointer;
+                &:hover {
+                    background: rgb(29, 40, 99);
+                }
+            }
+        }
+        #result-container {
+            flex: 1;
+            display: flex;
+            padding: 1rem;
+            #loader {
+                display: none;
+                width: 5rem;
+                height: 5rem;
+                margin: auto;
+                border: 0.5rem solid #f3f3f3;
+                border-top: 0.5rem solid coral;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+            }
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            #searchResults {
+                display: flex;
+                .poster {
+                    #back-to-search {
+                        display: none;
+                        padding-bottom: 1rem;
+                        cursor: pointer;
+                        width: max-content;
+                    }
+                    img {
+                        height: 334px;
+                        width: 225px;
+                        border-radius: 0.5rem;
+                        cursor: pointer;
+                    }
+                }
+                .movie-info {
+                    padding-left: 2rem;
+                    .movie-title {
+                        color: coral;
+                        text-align: center;
+                        font-size: 2rem;
+                        margin-bottom: 0.5rem;
+                    }
+                    .actors {
+                        margin-bottom: 0.5rem;
+                        font-size: 1rem;
+                    }
+                    .movie-plot {
+                        font-weight: 300;
+                        margin-top: 1rem;
+                    }
+                    #seasons {
+                        margin-top: 0.5rem;
+                        a {
+                            color: coral;
+                        }
+                    }
+                    #cta {
+                        width: 100%;
+                        margin-top: 1rem;
+                        button {
+                            width: 100%;
+                            padding: 0.5rem;
+                            background: rgb(48, 62, 143);
+                            border: none;
+                            color: cornsilk;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            #episodes {
+                display: none;
+                flex: 1;
+                #epiContent {
+                    width: 100%;
+                    padding: 0 2rem;
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    h2 {
+                        color: coral;
+                        text-align: center;
+                        font-size: 2rem;
+                        width: 100%;
+                    }
+                    #all-episodes {
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        list-style: none;
+                        height: 70vh;
+                        .episode {
+                            padding: 0.3rem 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}

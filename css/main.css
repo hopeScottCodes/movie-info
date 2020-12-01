@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2f96a3), to(#303e8f));
+  background: linear-gradient(#2f96a3, #303e8f);
+  color: cornsilk;
+}
+
+body a {
+  color: cornsilk;
+  text-decoration: none;
+}
+
+body input,
+body button,
+body textarea {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+}
+
+.logo-span {
+  color: coral;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.container header {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container header #title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.container header #somelinks {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.container header #somelinks a {
+  color: coral;
+  font-weight: 600;
+}
+
+.container header #somelinks a:hover {
+  color: cornsilk;
+}
+
+.container main {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2rem;
+}
+
+.container main #search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.container main #search-form input {
+  padding: 0.5rem;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 1rem;
+  background: transparent;
+  border: 2px solid #303e8f;
+  color: cornsilk;
+  caret-color: #303e8f;
+}
+
+.container main #search-form input:focus {
+  border: 2px solid #1d2863;
+}
+
+.container main #search-form button {
+  padding: 0.5rem;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 1rem;
+  background: #303e8f;
+  border: none;
+  color: cornsilk;
+  cursor: pointer;
+}
+
+.container main #search-form button:hover {
+  background: #1d2863;
+}
+
+.container main #result-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+}
+
+.container main #result-container #loader {
+  display: none;
+  width: 5rem;
+  height: 5rem;
+  margin: auto;
+  border: 0.5rem solid #f3f3f3;
+  border-top: 0.5rem solid coral;
+  border-radius: 50%;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.container main #result-container #searchResults {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container main #result-container #searchResults .poster #back-to-search {
+  display: none;
+  padding-bottom: 1rem;
+  cursor: pointer;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.container main #result-container #searchResults .poster img {
+  height: 334px;
+  width: 225px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.container main #result-container #searchResults .movie-info {
+  padding-left: 2rem;
+}
+
+.container main #result-container #searchResults .movie-info .movie-title {
+  color: coral;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.container main #result-container #searchResults .movie-info .actors {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.container main #result-container #searchResults .movie-info .movie-plot {
+  font-weight: 300;
+  margin-top: 1rem;
+}
+
+.container main #result-container #searchResults .movie-info #seasons {
+  margin-top: 0.5rem;
+}
+
+.container main #result-container #searchResults .movie-info #seasons a {
+  color: coral;
+}
+
+.container main #result-container #searchResults .movie-info #cta {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.container main #result-container #searchResults .movie-info #cta button {
+  width: 100%;
+  padding: 0.5rem;
+  background: #303e8f;
+  border: none;
+  color: cornsilk;
+  cursor: pointer;
+}
+
+.container main #result-container #episodes {
+  display: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.container main #result-container #episodes #epiContent {
+  width: 100%;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container main #result-container #episodes #epiContent h2 {
+  color: coral;
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.container main #result-container #episodes #epiContent #all-episodes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  height: 70vh;
+}
+
+.container main #result-container #episodes #epiContent #all-episodes .episode {
+  padding: 0.3rem 1rem;
+}
+
+footer {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=main.css.map */
